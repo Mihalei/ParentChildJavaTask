@@ -14,7 +14,7 @@ import static org.junit.Assert.*;
 public class FamilyForestTest {
 
     private String validInputFile = "D:\\Projects\\HiringTasks\\AltimaTask\\ParentChildJavaTask\\AltimaTask\\src\\test\\resources\\InputFile.txt";
-    private String validOutputFileExample = "D:\\Projects\\HiringTasks\\AltimaTask\\ParentChildJavaTask\\AltimaTask\\src\\test\\resources\\OutputFileExample.txt";
+    private String outputFileExpectedResult = "D:\\Projects\\HiringTasks\\AltimaTask\\ParentChildJavaTask\\AltimaTask\\src\\test\\resources\\OutputFileExpectedResult.txt";
     private String cyclicInputFile = "D:\\Projects\\HiringTasks\\AltimaTask\\ParentChildJavaTask\\AltimaTask\\src\\test\\resources\\CyclicInputFile.txt";
 
     private String expectedCyclicInputErrorMessageFile = "D:\\Projects\\HiringTasks\\AltimaTask\\ParentChildJavaTask\\AltimaTask\\src\\test\\resources\\ExpectedCyclicInputErrorMessage.txt";
@@ -152,7 +152,7 @@ public class FamilyForestTest {
             familyForest = Util.populateForest(validInputFile);
 
             StringBuilder sb = new StringBuilder();
-            for (String line: Files.readAllLines(Paths.get(validOutputFileExample))) {
+            for (String line: Files.readAllLines(Paths.get(outputFileExpectedResult))) {
                 sb.append(line);
                 sb.append('\n');
             }
